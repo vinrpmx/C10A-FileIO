@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-
-public class Student {
+public class Student implements Comparable<Student>{
 	private String name;
 	private int score;
 	
@@ -10,7 +8,13 @@ public class Student {
 		this.score = score;
 	}
 	
+	public int compareTo(Student otherStudent) {
+		return this.score - otherStudent.score;
+	}
 	
 	
 	//toString to be generated on Eclipse
+	public String toString() {
+		return name + " " + score;
+	}
 }
