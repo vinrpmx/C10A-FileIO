@@ -1,0 +1,38 @@
+I, Vincent Nguyen, certify that I participated equitably in the creation of assignment C10A, dated 2025.
+I, Austin Truhn, certify that I participated equitably in the creation of this assignment C10A, dated 2025.
+
+commit 87c893fa6ae46e8cc993882b1b54dbbdb785371d
+Author: Vincent Nguyen <vnguyen2@mines.edu>
+Date:   Thu Oct 2 16:13:23 2025 -0600
+
+    Added additional exception methods for when the formatting for the names and scores are not right.
+
+commit 067e3e402172008b94fce2a6b243205a69d48f7a
+Author: Vincent Nguyen <vnguyen2@mines.edu>
+Date:   Thu Oct 2 15:48:56 2025 -0600
+
+    Added C10A back to Github due to issues regarding Eclipse.
+
+commit 5598e36553ca13ccb30914156ea0cc03f1610a96
+Author: Vincent Nguyen <vnguyen2@mines.edu>
+Date:   Thu Oct 2 15:45:57 2025 -0600
+
+    Readded Project due to Eclipse issues and will implement Part2.
+
+commit 727380e999f759bbb6238df20e57d8414430cf79
+Author: Vincent Nguyen <vnguyen2@mines.edu>
+Date:   Thu Oct 2 15:23:43 2025 -0600
+
+    Added file modifications.
+
+commit d8a4573a85f856190429e116899dcb02d8e31dfc
+Author: Vincent Nguyen <vnguyen2@mines.edu>
+Date:   Thu Oct 2 14:20:36 2025 -0600
+
+    Added compareTo method and toString function for Student class.
+
+commit 4760790fb559b0a9ce10f7f9e24ca296ce22aaaf
+Author: Vincent Nguyen <vnguyen2@mines.edu>
+Date:   Wed Oct 1 16:22:16 2025 -0600
+
+    C10A has been setup, by creating the scoreTrekker and Student class, as well as the score and bad score text files.
