@@ -1,5 +1,0 @@
-commit 4760790fb559b0a9ce10f7f9e24ca296ce22aaaf
-Author: Vincent Nguyen <vnguyen2@mines.edu>
-Date:   Wed Oct 1 16:22:16 2025 -0600
-
-    C10A has been setup, by creating the scoreTrekker and Student class, as well as the score and bad score text files.
