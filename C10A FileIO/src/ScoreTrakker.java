@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.io.FileReader;
 import java.util.Collections;
 import java.util.Scanner;
-
 import java.io.FileNotFoundException;
 
 public class ScoreTrakker {
@@ -13,30 +12,31 @@ public class ScoreTrakker {
 	public ScoreTrakker() {
 		super();
 		this.students = new ArrayList<Student>();
-;
 	}
 	
-	public void loadDataFile(String fileName) {
+	//Loads the data from the file and detects any incorrect format through an exception
+	public void loadDataFile(String fileName) throws FileNotFoundException {
 		FileReader reader = null;
 		Scanner in = null;
-		try {
-			reader = new FileReader(fileName);
-			in = new Scanner(reader);
-			while(in.hasNextLine()) {
-				String name = in.nextLine();
-				String strScore = in.nextLine();
+		String name = "";
+		String strScore = "";
+		reader = new FileReader(fileName);
+		in = new Scanner(reader);
+		while(in.hasNextLine()) {
+			try {
+				name = in.nextLine();
+				strScore = in.nextLine();
 				int score = Integer.parseInt(strScore);
 				Student s = new Student(name, score);
 				students.add(s);
-				
+			} catch (NumberFormatException e) {
+				System.out.println("Incorrect format for " + name + " not a valid score: " + strScore);
 			}
-		} catch (FileNotFoundException e) {
-			System.out.println("File not found");
-		} catch (NumberFormatException e) {
-			System.out.println()
 		}
+		in.close();
 	}
 
+	//Sorts the array list and prints out the array
 	public void printInOrder(ArrayList<Student> student) {
 		Collections.sort(students);
 		for (Student aStudent : students) {
@@ -44,14 +44,19 @@ public class ScoreTrakker {
 		}
 	}
 	
+	//Calls out the previous methods and calls out an exception if file not found
 	public void processFiles() {
 		for (String fileName : this.files) {
-			loadDataFile(fileName);
-			printInOrder(students);
+			try {
+				loadDataFile(fileName);
+				printInOrder(students);
+			} catch (FileNotFoundException e) {
+				System.out.println("Can't open file: " + fileName);
+			}
 		}
-		
 	}
-	
+		
+	//Calls out the processFile method
 	public static void main(String[] args) {
 		ScoreTrakker tracker = new ScoreTrakker();
 		tracker.processFiles();

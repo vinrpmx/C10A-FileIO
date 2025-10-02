@@ -8,12 +8,14 @@ public class Student implements Comparable<Student>{
 		this.score = score;
 	}
 	
+	
+	//takes difference of score
 	public int compareTo(Student otherStudent) {
 		return this.score - otherStudent.score;
 	}
 	
 	
-	//toString to be generated on Eclipse
+	//toString that returns the name of the student and their score
 	public String toString() {
 		return name + " " + score;
 	}
