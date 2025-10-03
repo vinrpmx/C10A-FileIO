@@ -11,11 +11,11 @@ public class ScoreTrakker {
 	
 	public ScoreTrakker() {
 		super();
-		this.students = new ArrayList<Student>();
 	}
 	
 	//Loads the data from the file and detects any incorrect format through an exception
 	public void loadDataFile(String fileName) throws FileNotFoundException {
+		this.students = new ArrayList<Student>();
 		FileReader reader = null;
 		Scanner in = null;
 		String name = "";
@@ -31,6 +31,7 @@ public class ScoreTrakker {
 				students.add(s);
 			} catch (NumberFormatException e) {
 				System.out.println("Incorrect format for " + name + " not a valid score: " + strScore);
+				System.out.println();
 			}
 		}
 		in.close();
@@ -38,6 +39,7 @@ public class ScoreTrakker {
 
 	//Sorts the array list and prints out the array
 	public void printInOrder(ArrayList<Student> student) {
+		System.out.println("Student Score List");
 		Collections.sort(students);
 		for (Student aStudent : students) {
 			System.out.println(aStudent.toString());
@@ -50,6 +52,7 @@ public class ScoreTrakker {
 			try {
 				loadDataFile(fileName);
 				printInOrder(students);
+				System.out.println();
 			} catch (FileNotFoundException e) {
 				System.out.println("Can't open file: " + fileName);
 			}
