@@ -1,3 +1,6 @@
+I, Vincent Nguyen, certify that I participated equitably in the creation of assignment C10A, dated 2025.
+I, Austin Truhn, certify that I participated equitably in the creation of this assignment C10A, dated 2025.
+
 commit ec10e70264f71f6b89af54bbcccc9531f51a2255
 Author: Vincent Nguyen <vnguyen2@mines.edu>
 Date:   Thu Oct 2 18:15:26 2025 -0600
